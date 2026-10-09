@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="calculator-wrapper">
+    <!-- Calculator Main -->
+    <div class="calculator">
+      <!-- Header -->
+      <div class="calc-header">
+        <div class="brand">
+          <div class="brand-dot"></div>
+          <div class="brand-title">Calculator</div>
+        </div>
+        <div class="header-actions">
+          <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-sun" id="theme-icon-sun"></i>
+            <i class="fas fa-moon hidden" id="theme-icon-moon"></i>
+          </button>
+          <button class="icon-btn" id="history-toggle" aria-label="Toggle history">
+            <i class="fas fa-history"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Display Panel -->
+      <div class="display-container">
+        <div class="expression-line" id="expression-display"></div>
+        <div class="output-line">
+          <div class="output-value" id="primary-display">0</div>
+        </div>
+      </div>
+
+      <!-- Keypad -->
+      <div class="keypad">
+        <!-- Row 1 -->
+        <button class="key function-key" data-action="clear">AC</button>
+        <button class="key function-key" data-action="backspace">
+          <i class="fas fa-backspace"></i>
+        </button>
+        <button class="key function-key" data-action="percentage">%</button>
+        <button class="key operator-key" data-action="operator" data-value="÷">÷</button>
+
+        <!-- Row 2 -->
+        <button class="key number-key" data-value="7">7</button>
+        <button class="key number-key" data-value="8">8</button>
+        <button class="key number-key" data-value="9">9</button>
+        <button class="key operator-key" data-action="operator" data-value="×">×</button>
+
+        <!-- Row 3 -->
+        <button class="key number-key" data-value="4">4</button>
+        <button class="key number-key" data-value="5">5</button>
+        <button class="key number-key" data-value="6">6</button>
+        <button class="key operator-key" data-action="operator" data-value="-">-</button>
+
+        <!-- Row 4 -->
+        <button class="key number-key" data-value="1">1</button>
+        <button class="key number-key" data-value="2">2</button>
+        <button class="key number-key" data-value="3">3</button>
+        <button class="key operator-key" data-action="operator" data-value="+">+</button>
+
+        <!-- Row 5 -->
+        <button class="key function-key" data-action="negate">±</button>
+        <button class="key number-key" data-value="0">0</button>
+        <button class="key number-key" data-value=".">.</button>
+        <button class="key equals-key" data-action="equals">=</button>
+      </div>
+    </div>
+
+    <!-- History Panel -->
+    <div class="history-panel hidden" id="history-panel">
+      <div class="history-header">
+        <h3>History</h3>
+        <button class="text-btn" id="clear-history">Clear</button>
+      </div>
+      <div class="history-list" id="history-list">
+        <!-- History items will be added here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
